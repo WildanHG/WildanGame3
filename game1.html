@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Lempar</title>
+  <link rel="stylesheet" href="game1.css">
+</head>
+<body>
+  <!-- Tombol kembali & rotasi -->
+  <button class="back-button" onclick="goBack()">Kembali</button>
+  <button class="rotate-button" onclick="toggleFullscreen()">Full</button>
+
+  <!-- Background -->
+  <img src="assets/bg1.png" alt="Background" id="bgImage" class="background-img">
+
+  <!-- Tombol skill -->
+  <img src="assets/Tombol1.png" alt="Tombol Lempar" class="skill-button" onclick="playSkill('lempar')">
+  <img src="assets/Petir.png" alt="Tombol Petir" class="skill-button second" onclick="playSkill('petir')">
+
+  <!-- Video efek -->
+  <video id="skillVideo" class="fullscreen-video"></video>
+
+  <script src="game1.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #cce7ff, #005bea); /* biru muda ke biru tua */
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 5px;
+  color: #e0e0e0;
+  font-style: italic;
+}
+
+.score {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.karakter {
+  width: 180px;
+  height: auto;
+}
+
+.tombol-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.teks-pencet {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.tombol {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+}
+
+.tombol:active {
+  transform: scale(0.9);
+}
+
+/* ✅ Tambahan untuk tombol kembali */
+.kembali {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff55;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.kembali:hover {
+  background-color: #ffffffaa;
+}

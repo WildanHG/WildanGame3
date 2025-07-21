@@ -1,0 +1,166 @@
+/* Reset dan basic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  background: #000011;
+  position: relative;
+}
+
+/* Bulan */
+.moon {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #fffbd5, #f0e68c, #d2b48c);
+  border-radius: 50%;
+  box-shadow: 0 0 40px #fff;
+  z-index: 0;
+}
+
+/* Bintang kecil background */
+.stars {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  z-index: 0;
+}
+
+/* Bintang Jatuh */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, white, transparent);
+  opacity: 0.7;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -100px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-500px, 1000px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.shooting-star:nth-child(3) { left: 20%; animation-delay: 0s; }
+.shooting-star:nth-child(4) { left: 40%; animation-delay: 1s; }
+.shooting-star:nth-child(5) { left: 60%; animation-delay: 2s; }
+.shooting-star:nth-child(6) { left: 80%; animation-delay: 3s; }
+
+/* Meteor Custom */
+.custom-meteor {
+  position: absolute;
+  top: -100px;
+  width: 40px;
+  animation: customMeteorFall linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes customMeteorFall {
+  0% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Lobby */
+.lobby {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  top: 20%;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Tombol Minecraft */
+.btn.minecraft {
+  background-color: #5c8a42;
+  color: white;
+  font-size: 1.2rem;
+  border: 4px solid #3e5c29;
+  padding: 10px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 #3e5c29;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+.btn.minecraft:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* Credit page */
+.credit-container {
+  position: relative;
+  padding: 20px;
+  color: white;
+  height: 100%;
+  overflow-y: scroll;
+  background: #000011;
+}
+
+.credit-content {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 80px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

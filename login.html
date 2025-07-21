@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Wildan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-box" id="loginBox">
+    <h4 class="brand">Jambat01</h4>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="window.location.href='pw_us.html'" class="dapatkan-btn">Dapatkan</button>
+    <div id="spinner" class="spinner" style="display:none;"></div>
+    <p id="error" class="error-msg"></p>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      const error = document.getElementById("error");
+      const box = document.getElementById("loginBox");
+      const spinner = document.getElementById("spinner");
+
+      const user = username.value;
+      const pass = password.value;
+
+      username.classList.remove("input-success", "input-error");
+      password.classList.remove("input-success", "input-error");
+      box.classList.remove("shake");
+
+      if (user === "Jaran01" && pass === "//RamaJaran//") {
+        username.classList.add("input-success");
+        password.classList.add("input-success");
+        error.innerText = "";
+        spinner.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "lobby.html";
+        }, 5000);
+      } else {
+        username.classList.add("input-error");
+        password.classList.add("input-error");
+        error.innerText = "Gagal Login";
+
+        box.classList.add("shake");
+        setTimeout(() => {
+          box.classList.remove("shake");
+        }, 400);
+      }
+    }
+  </script>
+</body>
+</html>

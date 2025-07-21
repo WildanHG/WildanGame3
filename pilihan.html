@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilihan Game</title>
+  <link rel="stylesheet" href="style_pilihan.css" />
+  <script defer src="pilihan.js"></script>
+</head>
+<body>
+
+  <a href="lobby.html" class="btn-kembali">← Kembali</a>
+
+  <div class="scroll-container">
+    <h1 class="judul">Pilih</h1>
+    <h2 class="judul">Games</h2>
+
+    <div class="game-option" onclick="selectGame('game1')">
+      <img src="assets/game1.png" id="game1" class="game-img" alt="Game 1">
+    </div>
+
+    <div class="game-option" onclick="selectGame('game2')">
+      <img src="assets/game2.png" id="game2" class="game-img" alt="Game 2">
+    </div>
+
+    <button class="btn-mainkan" onclick="mainkan()">Mainkan</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Tai</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- ⭐ Langit malam -->
+  <div class="stars"></div>
+  <div class="moon"></div>
+
+  <!-- 🌠 Bintang Jatuh -->
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- ☄️ Meteor -->
+  <img src="Meteor.png" class="custom-meteor" />
+  <img src="Meteor.png" class="custom-meteor" />
+
+  <!-- 🏠 Lobby -->
+  <div class="lobby">
+    <h1 class="title">Welcome</h1>
+    <h2 class="subtitle">To Game Tai</h2>
+    <button class="btn minecraft" onclick="playClickSound()">Play</button>
+    <button class="btn minecraft" onclick="goToCredits()">Credit</button>
+  </div>
+
+  <!-- 🔊 Sound -->
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+</body>
+</html>

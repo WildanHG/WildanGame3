@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Info Akun</title>
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="info-box animate-in">
+    <h2>Informasi Akun</h2>
+    <p><strong>Username:</strong> <span id="user">Jaran01</span> <button class="copy-btn" onclick="copyToClipboard('user')">Salin</button></p>
+    <p><strong>Password:</strong> <span id="pass">//RamaJaran//</span> <button class="copy-btn" onclick="copyToClipboard('pass')">Salin</button></p>
+    <a href="login.html" class="back-btn">← Kembali ke Login</a>
+  </div>
+
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert(id === "user" ? "Username disalin!" : "Password disalin!");
+      });
+    }
+  </script>
+</body>
+</html>
